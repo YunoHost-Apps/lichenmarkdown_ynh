@@ -3,15 +3,15 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# XBackBone para Yunohost
+# Lichen-Markdown para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/xbackbone.svg)](https://dash.yunohost.org/appci/app/xbackbone) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/xbackbone.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/xbackbone.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/lichenmarkdown.svg)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.maintain.svg)
 
-[![Instalar XBackBone con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=xbackbone)
+[![Instalar Lichen-Markdown con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=lichenmarkdown)
 
 *[Leer este README en otros idiomas.](./ALL_README.md)*
 
-> *Este paquete le permite instalarXBackBone rapidamente y simplement en un servidor YunoHost.*  
+> *Este paquete le permite instalarLichen-Markdown rapidamente y simplement en un servidor YunoHost.*  
 > *Si no tiene YunoHost, visita [the guide](https://yunohost.org/install) para aprender como instalarla.*
 
 ## Descripción general
@@ -23,25 +23,25 @@ XBackBone is a simple and lightweight PHP file manager that support the instant 
 
 ## Capturas
 
-![Captura de XBackBone](./doc/screenshots/screenshot.png)
+![Captura de Lichen-Markdown](./doc/screenshots/screenshot.png)
 
 ## Documentaciones y recursos
 
-- Documentación administrador oficial: <https://xbackbone.app/>
-- Repositorio del código fuente oficial de la aplicación : <https://github.com/SergiX44/XBackBone>
-- Catálogo YunoHost: <https://apps.yunohost.org/app/xbackbone>
-- Reportar un error: <https://github.com/YunoHost-Apps/xbackbone_ynh/issues>
+- Documentación administrador oficial: <https://lichen.commoninternet.net>
+- Repositorio del código fuente oficial de la aplicación : <https://codeberg.org/ukrudt.net/lichen-markdown/>
+- Catálogo YunoHost: <https://apps.yunohost.org/app/lichenmarkdown>
+- Reportar un error: <https://github.com/YunoHost-Apps/lichenmarkdown_ynh/issues>
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/xbackbone_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/lichenmarkdown_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/xbackbone_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/lichenmarkdown_ynh/tree/testing --debug
 o
-sudo yunohost app upgrade xbackbone -u https://github.com/YunoHost-Apps/xbackbone_ynh/tree/testing --debug
+sudo yunohost app upgrade lichenmarkdown -u https://github.com/YunoHost-Apps/lichenmarkdown_ynh/tree/testing --debug
 ```
 
 **Mas informaciones sobre el empaquetado de aplicaciones:** <https://yunohost.org/packaging_apps>
