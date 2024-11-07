@@ -16,9 +16,8 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_setup_source --dest_dir="$install_dir"
 
-mkdir "$install_dir/storage"
-
 chown -R $app:www-data "$install_dir"
+chmod -R u+rwX,g+rwX,o+r "$install_dir"
 
 #=================================================
 # PHP-FPM CONFIGURATION
@@ -34,21 +33,7 @@ ynh_add_nginx_config
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding a configuration file..." --weight=1
-
-ynh_add_config --template="config.php" --destination="$install_dir/config.php"
-
-chmod 400 "$install_dir/config.php"
-chown $app:$app "$install_dir/config.php"
-
-#=================================================
-# FINAL BOOKSTACK INSTALL
-#=================================================
-ynh_script_progression --message="Install database" --weight=1
-
-pushd $install_dir
-	php$phpversion bin/migrate --install
-popd
+sudo htpasswd -cb $install_dir/lichen-markdown/.htpasswd admin $admin_password
 
 #=================================================
 # END OF SCRIPT
