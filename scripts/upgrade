@@ -15,19 +15,15 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Upgrading source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir" --keep="config.php"
+upgrade_temp_dir=$install_dir/upgrade
+ynh_setup_source --dest_dir="$upgrade_temp_dir"
+
+# upgrade only the lichen-markdown/src/cms folder
+mv $install_dir/lichen-markdown/src/cms $upgrade_temp_dir/cms-backup
+cp -r $upgrade_temp_dir/src/cms $install_dir/lichen-markdown/src/cms
+rm -rf $upgrade_temp_dir
 
 chown -R $app:www-data "$install_dir"
-
-#=================================================
-# XBACKBONE UPGRADE
-#=================================================
-ynh_script_progression --message="Install database" --weight=1
-
-pushd $install_dir
-	php$phpversion bin/migrate
-	php$phpversion bin/clean
-popd
 
 #=================================================
 # PHP-FPM CONFIGURATION
