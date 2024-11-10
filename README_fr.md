@@ -23,7 +23,7 @@ XBackBone est un gestionnaire de fichiers PHP simple et léger qui prend en char
 
 ## Captures d’écran
 
-![Capture d’écran de Lichen-Markdown](./doc/screenshots/screenshot.png)
+![Capture d’écran de Lichen-Markdown](./doc/screenshots/lichen-markdown-cms-boxshadow4.png)
 
 ## Documentations et ressources
 
