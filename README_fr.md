@@ -16,8 +16,7 @@ Il NE doit PAS être modifié à la main.
 
 ## Vue d’ensemble
 
-XBackBone est un gestionnaire de fichiers PHP simple et léger qui prend en charge l'outil de partage instantané des systèmes ShareX et NIX. Il prend en charge le téléchargement et l'affichage d'images, GIF, vidéo, code, texte formaté, pdf et téléchargement et téléchargement de fichiers. Disposez également d'une interface utilisateur Web avec gestion multi-utilisateurs, galerie multimédia et prise en charge de la recherche.
-
+Lichen-Markdown est un CMS simple et léger inspiré de la [permacomputing](https://permacomputing.net). C'est « le CMS le plus simple possible pour le Web qui est suffisamment convivial pour les utilisateurs non techniques ».
 
 **Version incluse :** 3.7.0~ynh1
 
