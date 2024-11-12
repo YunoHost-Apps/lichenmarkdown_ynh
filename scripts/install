@@ -17,7 +17,7 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 ynh_setup_source --dest_dir="$install_dir"
 
 chown -R $app:www-data "$install_dir"
-chmod -R u+rwX,g+rwX,o+r "$install_dir"
+chmod -R u+rwX,g+rwX,o= "$install_dir"
 
 #=================================================
 # PHP-FPM CONFIGURATION
