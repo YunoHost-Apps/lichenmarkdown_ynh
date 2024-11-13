@@ -3,3 +3,4 @@ deploy.sh
 conf/testing
 nginx.sh
 conf/debug.conf
+conf/subpath.conf
