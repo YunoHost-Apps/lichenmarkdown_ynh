@@ -33,7 +33,7 @@ ynh_add_nginx_config
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-sudo htpasswd -cb $install_dir/lichen-markdown/.htpasswd admin $admin_password
+htpasswd -cb $install_dir/lichen-markdown/.htpasswd admin $admin_password
 
 #=================================================
 # END OF SCRIPT

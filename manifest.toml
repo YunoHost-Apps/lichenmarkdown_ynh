@@ -34,6 +34,7 @@ ram.runtime = "50M"
 
     [install.admin_password]
     type = "password"
+    ask = "What password will you use to login to the admin section?"
 
 [resources]
         [resources.sources.main]
