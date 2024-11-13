@@ -20,7 +20,7 @@ ynh_setup_source --dest_dir="$upgrade_temp_dir"
 
 # upgrade only the lichen-markdown/src/cms folder
 mv $install_dir/lichen-markdown/src/cms $upgrade_temp_dir/cms-backup
-cp -r $upgrade_temp_dir/src/cms $install_dir/lichen-markdown/src/cms
+cp -r $upgrade_temp_dir/cms-backup $install_dir/lichen-markdown/src/cms
 ynh_secure_remove $upgrade_temp_dir
 
 chown -R $app:www-data "$install_dir"
