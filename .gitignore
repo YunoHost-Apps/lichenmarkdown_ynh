@@ -1,3 +1,6 @@
 deploy.sh
 .idea
 conf/testing
+nginx.sh
+conf/debug.conf
+conf/subpath.conf
