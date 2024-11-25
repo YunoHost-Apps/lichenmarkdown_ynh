@@ -12,22 +12,19 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R u+rwX,g+rwX,o= "$install_dir"
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
 ynh_script_progression "Configuring PHP-FPM..."
 
-# Create a dedicated PHP-FPM config
 ynh_config_add_phpfpm
 
-# Create a dedicated NGINX config
 ynh_config_add_nginx
 
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
+
 htpasswd -cb $install_dir/lichen-markdown/.htpasswd admin $admin_password
 
 #=================================================
