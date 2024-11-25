@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Lichen-Markdown YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/lichenmarkdown.svg)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/lichenmarkdown)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/lichenmarkdown)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/lichenmarkdown)
 
 [![Instalatu Lichen-Markdown YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=lichenmarkdown)
 

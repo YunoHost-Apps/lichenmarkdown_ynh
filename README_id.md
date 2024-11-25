@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Lichen-Markdown untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/lichenmarkdown.svg)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/lichenmarkdown)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
+![Status kerja](https://apps.yunohost.org/badge/state/lichenmarkdown)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/lichenmarkdown)
 
 [![Pasang Lichen-Markdown dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=lichenmarkdown)
 

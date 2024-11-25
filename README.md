@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # Lichen-Markdown for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/lichenmarkdown.svg)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/) ![Working status](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/lichenmarkdown)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
+![Working status](https://apps.yunohost.org/badge/state/lichenmarkdown)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/lichenmarkdown)
 
 [![Install Lichen-Markdown with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=lichenmarkdown)
 

@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Lichen-Markdown
 
-[![集成程度](https://dash.yunohost.org/integration/lichenmarkdown.svg)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/lichenmarkdown.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/lichenmarkdown)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
+![工作状态](https://apps.yunohost.org/badge/state/lichenmarkdown)
+![维护状态](https://apps.yunohost.org/badge/maintained/lichenmarkdown)
 
 [![使用 YunoHost 安装 Lichen-Markdown](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=lichenmarkdown)
 
