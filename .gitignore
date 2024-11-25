@@ -3,4 +3,6 @@ deploy.sh
 conf/testing
 nginx.sh
 conf/debug.conf
-conf/subpath.conf
+conf/subpath.conf*~
+*.sw[op]
+.DS_Store
