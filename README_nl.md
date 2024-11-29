@@ -21,7 +21,7 @@ Hij mag NIET handmatig aangepast worden.
 Lichen-Markdown is a simple and lightweight CMS inspired by [permacomputing](https://permacomputing.net). It is "the simplest possible CMS for the web that is friendly enough for non-technical users."
 
 
-**Geleverde versie:** 1.0.0~ynh1
+**Geleverde versie:** 1.1.0~ynh1
 
 ## Schermafdrukken
 
