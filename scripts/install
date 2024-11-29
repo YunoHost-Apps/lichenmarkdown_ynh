@@ -11,7 +11,7 @@ ynh_app_setting_set --key=php_upload_max_filesize --value=1G
 ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
-sudo chmod -R u+rwX,g+rwX,o+r $install_dir/lichen-markdown/src
+chmod -R u+rwX,g+rwX,o+r $install_dir/lichen-markdown/src
 
 #=================================================
 # PHP-FPM CONFIGURATION
