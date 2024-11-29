@@ -18,6 +18,7 @@ ynh_setup_source --dest_dir="$upgrade_temp_dir"
 mv $install_dir/lichen-markdown/src/cms $upgrade_temp_dir/cms-backup
 cp -r $upgrade_temp_dir/cms-backup $install_dir/lichen-markdown/src/cms
 ynh_safe_rm $upgrade_temp_dir
+sudo chmod -R u+rwX,g+rwX,o+r $install_dir/lichen-markdown/
 
 #=================================================
 # PHP-FPM CONFIGURATION
