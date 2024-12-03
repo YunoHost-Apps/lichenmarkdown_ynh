@@ -5,7 +5,7 @@ name = "Lichen-Markdown"
 description.en = "permacomputing cms"
 description.fr = "permacomputing cms"
 
-version = "1.0.0~ynh1"
+version = "1.1.0~ynh1"
 
 maintainers = []
 
@@ -15,7 +15,8 @@ admindoc = "https://lichen.commoninternet.net"
 code = "https://codeberg.org/ukrudt.net/lichen-markdown/"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.18"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -38,13 +39,14 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/v1.0.0.zip"
-        sha256 = "5711ae9db1e20456fbe45e8888da75531992b44237e44e1bf0d0cb507af81779"
+        url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/v1.1.0.zip"
+        sha256 = "bf7bda84dfaa90a98f71526818fa7af42b4844773cc87f66286abf5779e6579b"
         in_subdir = false
 
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:rwx"
 
     [resources.data_dir]
 
@@ -52,5 +54,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "apache2-utils php8.2-intl, php8.2-mysql, php8.2-gd, php8.2-fileinfo, php8.2-zip, php8.2-ldap"
+    packages = "apache2-utils php8.2-intl, php8.2-mysql, php8.2-gd, php8.2-fileinfo, php8.2-zip, php8.2-ldap, php8.2-fpm"
 
