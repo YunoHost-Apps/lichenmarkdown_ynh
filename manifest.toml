@@ -5,7 +5,7 @@ name = "Lichen-Markdown"
 description.en = "permacomputing cms"
 description.fr = "permacomputing cms"
 
-version = "1.1.0~ynh1"
+version = "1.2.1~ynh1"
 
 maintainers = []
 
@@ -39,8 +39,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/v1.1.0.zip"
-        sha256 = "bf7bda84dfaa90a98f71526818fa7af42b4844773cc87f66286abf5779e6579b"
+        url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/v1.2.1.zip"
+        sha256 = "9513becb18499fc7e0cc627ecc872df5b12ddaf569f04669dacd100daf21843c"
         in_subdir = false
 
     [resources.system_user]
