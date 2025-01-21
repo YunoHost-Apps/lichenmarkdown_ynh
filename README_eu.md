@@ -21,7 +21,7 @@ EZ editatu eskuz.
 Lichen-Markdown is a simple and lightweight CMS inspired by [permacomputing](https://permacomputing.net). It is "the simplest possible CMS for the web that is friendly enough for non-technical users."
 
 
-**Paketatutako bertsioa:** 1.1.0~ynh1
+**Paketatutako bertsioa:** 1.2.1~ynh2
 
 ## Pantaila-argazkiak
 
