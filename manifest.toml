@@ -5,7 +5,7 @@ name = "Lichen-Markdown"
 description.en = "permacomputing cms"
 description.fr = "permacomputing cms"
 
-version = "1.2.1~ynh1"
+version = "1.2.1~ynh2"
 
 maintainers = []
 
