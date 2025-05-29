@@ -4,13 +4,13 @@ It shall NOT be edited by hand.
 -->
 
 <h1>
-  <img src="https://raw.githubusercontent.com/YunoHost/apps/master/logos/lichenmarkdown.png" width="32px" alt="Logo of Lichen-Markdown">
+  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/lichenmarkdown.png" width="32px" alt="Logo of Lichen-Markdown">
   Lichen-Markdown, packaged for YunoHost
 </h1>
 
 permacomputing cms
 
-![Version: 1.3.1~ynh1](https://img.shields.io/badge/Version-1.3.1~ynh1-rgba(0,150,0,1)?style=for-the-badge)
+[![Version: 1.3.2~ynh1](https://img.shields.io/badge/Version-1.3.2~ynh1-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/lichenmarkdown"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
@@ -18,6 +18,8 @@ permacomputing cms
 </div>
 
 ## 📦 Developer info
+
+[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/lichenmarkdown)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
 
 🛠️ Upstream Lichen-Markdown repository: <https://codeberg.org/ukrudt.net/lichen-markdown/>
 
