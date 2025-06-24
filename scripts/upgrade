@@ -30,6 +30,9 @@ ynh_config_add_phpfpm
 
 ynh_config_add_nginx
 
+ynh_script_progression "Configuring fail2ban..."
+ynh_config_add_fail2ban --logpath="/var/log/nginx/$domain-error.log" --failregex='user ".*": password mismatch, client: <HOST>,'
+
 #=================================================
 # END OF SCRIPT
 #=================================================

@@ -28,6 +28,10 @@ ynh_config_add_nginx
 
 htpasswd -cb $install_dir/lichen-markdown/.htpasswd admin $admin_password
 
+
+ynh_script_progression "Configuring fail2ban..."
+ynh_config_add_fail2ban --logpath="/var/log/nginx/$domain-error.log" --failregex='user ".*": password mismatch, client: <HOST>,'
+
 #=================================================
 # END OF SCRIPT
 #=================================================
