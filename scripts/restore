@@ -28,6 +28,14 @@ ynh_systemctl --service=php$php_version-fpm --action=reload
 ynh_systemctl --service=nginx --action=reload
 
 #=================================================
+# RESTORE FAIL2BAN
+#=================================================
+
+ynh_restore "/etc/fail2ban/jail.d/$app.conf"
+ynh_restore "/etc/fail2ban/filter.d/$app.conf"
+ynh_systemctl --action=restart --service=fail2ban
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
