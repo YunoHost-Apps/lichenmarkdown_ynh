@@ -12,7 +12,7 @@ ynh_print_info "Declaring files to be backed up..."
 ynh_backup "$install_dir"
 
 #=================================================
-# BACKUP THE NGINX CONFIGURATION
+# BACKUP YWEBSOCKET CONFIG
 #=================================================
 
 ynh_backup "/etc/nginx/conf.d/$domain.d/$app.conf"
@@ -22,6 +22,13 @@ ynh_backup "/etc/php/$php_version/fpm/pool.d/$app.conf"
 # Backup the Fail2Ban config
 ynh_backup "/etc/fail2ban/jail.d/$app.conf"
 ynh_backup "/etc/fail2ban/filter.d/$app.conf"
+
+# Backup the systemd service unit
+ynh_backup "/etc/systemd/system/$app-y-websocket.service"
+
+# Backup the logrotate configuration
+ynh_backup "/etc/logrotate.d/$app"
+
 
 #=================================================
 # END OF SCRIPT

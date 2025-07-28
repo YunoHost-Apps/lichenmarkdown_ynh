@@ -6,3 +6,4 @@ conf/debug.conf
 conf/subpath.conf*~
 *.sw[op]
 .DS_Store
+install.sh
