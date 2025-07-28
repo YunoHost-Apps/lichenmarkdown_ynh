@@ -24,11 +24,7 @@ chown -R $app:www-data $install_dir/lichen-markdown/
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression "Upgrading PHP-FPM configuration..."
-
-ynh_config_add_phpfpm
-
-ynh_config_add_nginx
+ynh_script_progression "Upgrading PHP-FPM configuration and fail2ban..."
 
 ynh_script_progression "Configuring fail2ban..."
 ynh_config_add_fail2ban --logpath="/var/log/nginx/$domain-error.log" --failregex='user ".*": password mismatch, client: <HOST>,'
