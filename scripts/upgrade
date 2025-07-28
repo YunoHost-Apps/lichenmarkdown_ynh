@@ -31,7 +31,7 @@ ynh_config_add_fail2ban --logpath="/var/log/nginx/$domain-error.log" --failregex
 
 # Create a dedicated PHP-FPM config
 ynh_app_setting_set_default --key="php_upload_max_filesize" --value="1G"
-ynh_config_add_fpm
+ynh_config_add_phpfpm
 
 # Create a dedicated NGINX config
 ynh_config_add_nginx
