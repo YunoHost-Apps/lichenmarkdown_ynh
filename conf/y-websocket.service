@@ -1,0 +1,18 @@
+[Unit]
+Description=Lichen-Markdown Y-WebSocket Server
+After=network.target
+
+[Service]
+User=__APP__
+Group=__APP__
+Restart=always
+WorkingDirectory=__INSTALL_DIR__/
+Environment="HOST=localhost"
+Environment="PORT=__PORT_YSOCKET__"
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/npx y-websocket
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -3,6 +3,11 @@ deploy.sh
 conf/testing
 nginx.sh
 conf/debug.conf
+<<<<<<< HEAD
 conf/subpath.conf*~
 *.sw[op]
 .DS_Store
+=======
+conf/subpath.conf
+install.sh
+>>>>>>> ed60765 (Add y-websocket to package)
