@@ -46,7 +46,7 @@ ynh_script_progression "Adding configurations related to yjs-websocket for $app.
 # install node 18 for using yjs websocket 
 nodejs_version=18
 ynh_nodejs_install
-ynh_hide_warnings $nodejs_dir/npm install -g -g @y/websocket-server
+ynh_hide_warnings $nodejs_dir/npm install -g @y/websocket-server
 
 # Create a dedicated systemd config
 ynh_config_add_systemd --service=$app-y-websocket --template=y-websocket.service
