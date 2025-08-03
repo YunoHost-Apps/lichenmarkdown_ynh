@@ -12,7 +12,6 @@ permacomputing cms
 
 [![Version: 1.3.5~ynh2](https://img.shields.io/badge/Version-1.3.5~ynh2-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/lichenmarkdown/)
 
-
 <div align="center">
 <a href="https://apps.yunohost.org/app/lichenmarkdown"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
 <a href="https://github.com/YunoHost-Apps/lichenmarkdown_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
