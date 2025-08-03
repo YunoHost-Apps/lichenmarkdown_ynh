@@ -10,7 +10,8 @@ WorkingDirectory=__INSTALL_DIR__/
 Environment="HOST=localhost"
 Environment="PORT=__PORT_YSOCKET__"
 Environment="NODE_ENV=production"
-ExecStart=/usr/bin/npx y-websocket
+Environment="PATH=__PATH_WITH_NODEJS__"
+ExecStart=__NODEJS_DIR__/npx y-websocket
 Restart=always
 RestartSec=5
 StandardOutput=append:/var/log/__APP__/__APP__.log

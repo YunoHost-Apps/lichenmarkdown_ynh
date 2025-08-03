@@ -17,6 +17,7 @@ ynh_setup_source --dest_dir="$upgrade_temp_dir"
 # upgrade only the lichen-markdown/src/cms folder
 mv $install_dir/lichen-markdown/src/cms $upgrade_temp_dir/cms-backup
 cp -r $upgrade_temp_dir/lichen-markdown/src/cms $install_dir/lichen-markdown/src/cms
+cp $upgrade_temp_dir/lichen-markdown/src/assets/yjs-bundle.iife.js $install_dir/lichen-markdown/src/assets/yjs-bundle.iife.js
 ynh_safe_rm $upgrade_temp_dir
 chmod -R u+rwX,g+rwX,o= $install_dir/lichen-markdown/
 chown -R $app:www-data $install_dir/lichen-markdown/
@@ -45,7 +46,7 @@ ynh_script_progression "Adding configurations related to yjs-websocket for $app.
 # install node 18 for using yjs websocket 
 nodejs_version=18
 ynh_nodejs_install
-/usr/bin/npm install -g @y/websocket-server
+ynh_hide_warnings ynh_exec_as_app npm install -g @y/websocket-server
 
 # Create a dedicated systemd config
 ynh_config_add_systemd --service=$app-y-websocket --template=y-websocket.service
