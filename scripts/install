@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source _common.sh
+
 source /usr/share/yunohost/helpers
 
 ynh_app_setting_set --key=php_upload_max_filesize --value=1G
@@ -41,8 +41,8 @@ ynh_config_add_fail2ban --logpath="/var/log/nginx/$domain-error.log" --failregex
 ynh_script_progression "Adding configurations related to yjs-websocket for $app..."
 
 # install node 18 for using yjs websocket 
-nodejs_version=18
-ynh_nodejs_install
+#REMOVEME? nodejs_version=18
+#REMOVEME? ynh_nodejs_install
 ynh_hide_warnings $nodejs_dir/npm install -g @y/websocket-server
 
 # Create a dedicated systemd config
