@@ -22,6 +22,12 @@ ynh_safe_rm $upgrade_temp_dir
 chmod -R u+rwX,g+rwX,o= $install_dir/lichen-markdown/
 chown -R $app:www-data $install_dir/lichen-markdown/
 
+# reinitialize dist dir
+ynh_script_progression "Initializing dist dir..."
+mkdir -p $install_dir/lichen-markdown/dist
+cd $install_dir/lichen-markdown/src && php cms/build.php
+chown -R $app:www-data $install_dir/lichen-markdown/dist
+
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
