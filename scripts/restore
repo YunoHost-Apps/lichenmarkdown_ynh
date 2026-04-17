@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../settings/scripts/_common.sh
+
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -41,8 +41,8 @@ ynh_systemctl --action=restart --service=fail2ban
 ynh_script_progression "Restoring system configurations related to $app..."
 
 # install node 18 for using yjs websocket 
-nodejs_version=18
-ynh_nodejs_install
+#REMOVEME? nodejs_version=18
+#REMOVEME? ynh_nodejs_install
 /usr/bin/npm install -g @y/websocket-server
 
 # Create a dedicated systemd config
