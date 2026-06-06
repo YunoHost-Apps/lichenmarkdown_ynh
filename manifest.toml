@@ -39,7 +39,7 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/yjs-v1.3.8.zip"
+    url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/v1.5.0.zip"
     sha256 = "76f4ba05ba059cf4974189c77eac06d6a1b1c83023a8da5c44d70161231ad6f6"
     in_subdir = false
 
