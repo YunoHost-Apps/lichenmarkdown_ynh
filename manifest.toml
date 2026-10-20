@@ -5,17 +5,17 @@ name = "Lichen-Markdown"
 description.en = "permacomputing cms"
 description.fr = "permacomputing cms"
 
-version = "1.3.8~ynh2"
+version = "1.5.0~ynh1"
 
 maintainers = []
 
 [upstream]
-license = "AGPL-3.0"
+license = "MIT"
 admindoc = "https://lichen.commoninternet.net"
-code = "https://codeberg.org/ukrudt.net/lichen-markdown/"
+code = "https://codeberg.org/ukrudt-net/lichen-markdown/"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 12.0"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -39,13 +39,9 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://codeberg.org/ukrudt.net/lichen-markdown/archive/yjs-v1.3.8.zip"
-    sha256 = "76f4ba05ba059cf4974189c77eac06d6a1b1c83023a8da5c44d70161231ad6f6"
+    url = "https://codeberg.org/ukrudt-net/lichen-markdown/archive/v1.5.0.zip"
+    sha256 = "ad52d0ec4ea69aecd7401661e3131233a967fc1fe7a4377f07f2390c339a167d"
     in_subdir = false
-
-    [resources.ports]
-    ysocket.default = 1235
-    ysocket.exposed = false
 
     [resources.system_user]
 
@@ -58,5 +54,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "apache2-utils php8.2-intl, php8.2-mysql, php8.2-gd, php8.2-fileinfo, php8.2-zip, php8.2-ldap, php8.2-fpm, nodejs, npm"
+    packages = "apache2-utils, php8.2-fpm, php8.2-gd, php8.2-zip"
 

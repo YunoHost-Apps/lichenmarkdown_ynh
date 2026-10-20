@@ -5,3 +5,15 @@ test_format = 1.0
     # ------------
     # Tests to run
     # ------------
+
+[default.curl_tests]
+home.path = "/"
+home.expect_return_code = 200
+admin.path = "/cms/edit.php"
+admin.expect_return_code = 401
+render.path = "/cms/render.php"
+render.expect_return_code = 200
+update.path = "/update/update_lichen.sh"
+update.expect_return_code = 404
+password_file.path = "/.htpasswd"
+password_file.expect_return_code = 404

@@ -3,64 +3,15 @@
 source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
-#=================================================
-# RESTORE THE APP MAIN DIR
-#=================================================
-ynh_script_progression "Restoring the app main directory..."
-
+ynh_script_progression "Restoring Lichen-Markdown files and configuration..."
 ynh_restore "$install_dir"
-
-#=================================================
-# RESTORE THE PHP-FPM CONFIGURATION
-#=================================================
-ynh_script_progression "Restoring the PHP-FPM configuration..."
-
 ynh_restore "/etc/php/$php_version/fpm/pool.d/$app.conf"
-
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
-
-#=================================================
-# RELOAD NGINX AND PHP-FPM
-#=================================================
-ynh_script_progression "Reloading NGINX web server and PHP-FPM..."
-
-ynh_systemctl --service=php$php_version-fpm --action=reload
-ynh_systemctl --service=nginx --action=reload
-
-#=================================================
-# RESTORE FAIL2BAN
-#=================================================
-
 ynh_restore "/etc/fail2ban/jail.d/$app.conf"
 ynh_restore "/etc/fail2ban/filter.d/$app.conf"
-ynh_systemctl --action=restart --service=fail2ban
 
-#=================================================
-# RESTORE YWEBSOCKET
-#=================================================
-ynh_script_progression "Restoring system configurations related to $app..."
-
-# install node 18 for using yjs websocket 
-nodejs_version=18
-ynh_nodejs_install
-/usr/bin/npm install -g @y/websocket-server
-
-# Create a dedicated systemd config
-ynh_config_add_systemd --service=$app-y-websocket --template=y-websocket.service
-
-# add services to ynh
-yunohost service add "$app-y-websocket" --needs_exposed_ports="$port_ysocket" --description="lichen-markdown y-websocket service" --log="/var/log/$app/$app-y-websocket.log"
-
-# Use logrotate to manage application logfile(s)
-ynh_config_add_logrotate /var/log/$app/$app-y-websocket.log
-
-ynh_script_progression "Starting $app-y-webosocket systemd services..."
-
-# Start a systemd service
-ynh_systemctl --service="$app-y-websocket" --action="start"
-
-#=================================================
-# END OF SCRIPT
-#=================================================
+ynh_systemctl --service="php$php_version-fpm" --action=reload
+ynh_systemctl --service=nginx --action=reload
+ynh_systemctl --service=fail2ban --action=restart
 
 ynh_script_progression "Restoration completed for $app"
