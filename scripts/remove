@@ -3,38 +3,21 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-#=================================================
-# REMOVE NGINX CONFIGURATION
-#=================================================
-ynh_script_progression "Removing NGINX web server configuration..."
-
 ynh_config_remove_nginx
-
 ynh_config_remove_phpfpm
-
-#=================================================
-# REMOVE YSOCKET CONFIGURATION
-#=================================================
-ynh_script_progression "Removing system configurations related to $app..."
-
 ynh_config_remove_fail2ban
 
-ynh_config_remove_logrotate
-
-# Remove the service from the list of services known by YunoHost (added from `yunohost service add`)
-if ynh_hide_warnings yunohost service status "$app-y-websocket" >/dev/null; then
+# Also handle installs removed before the migration to v1.5.0.
+if [ -f "/etc/systemd/system/$app-y-websocket.service" ]; then
+    ynh_systemctl --service="$app-y-websocket" --action=stop
+    ynh_config_remove_systemd --service="$app-y-websocket"
+fi
+if yunohost service status "$app-y-websocket" >/dev/null 2>&1; then
     yunohost service remove "$app-y-websocket"
 fi
-
-ynh_script_progression "Stopping $app's ywebsocket systemd service..."
-
-# stop systemd service and then remove it 
-ynh_systemctl --service="$app-y-websocket" --action="stop"
-
-ynh_config_remove_systemd --service=$app-y-websocket
-
-#=================================================
-# END OF SCRIPT
-#=================================================
-
-ynh_script_progression "Removal of $app completed"
+if [ -f "/etc/logrotate.d/$app" ]; then
+    ynh_config_remove_logrotate
+fi
+if [ -n "${nodejs_version:-}" ]; then
+    ynh_nodejs_remove
+fi
