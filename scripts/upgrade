@@ -16,9 +16,6 @@ fi
 if [ -f "/etc/logrotate.d/$app" ]; then
     ynh_config_remove_logrotate
 fi
-if [ -n "${nodejs_version:-}" ]; then
-    ynh_nodejs_remove
-fi
 
 ynh_script_progression "Upgrading Lichen-Markdown code while preserving site content..."
 upgrade_temp_dir="$install_dir/upgrade"

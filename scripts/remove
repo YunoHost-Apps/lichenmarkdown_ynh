@@ -18,6 +18,3 @@ fi
 if [ -f "/etc/logrotate.d/$app" ]; then
     ynh_config_remove_logrotate
 fi
-if [ -n "${nodejs_version:-}" ]; then
-    ynh_nodejs_remove
-fi
